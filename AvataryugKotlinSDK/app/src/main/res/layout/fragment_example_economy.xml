@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Avataryug.Example.QuickTest.MainActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="5sp"
+        android:text="Economy Api"
+        android:textAlignment="center"
+        android:textColor="#505050"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <Button
+            android:id="@+id/EconomyItemsBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Items Top"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/EconomyItemsByIDsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Items By ID"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+        <Button
+            android:id="@+id/EconomyBundlesBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Bundles"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/EconomyBundleByIDBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Bundle By ID"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout15">
+
+        <Button
+            android:id="@+id/EconomyContainersBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Containers"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/EconomyContainersByIDBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Containers By ID"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout16">
+
+        <Button
+            android:id="@+id/EconomyStoresBtn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Stores"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+
+        <Button
+            android:id="@+id/EconomyStoresByIDBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:layout_weight="1"
+            android:text="Get Economy Stores By ID"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            app:cornerRadius="5dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="Avataryug.Example.QuickTest.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+
+            <fragment
+                android:id="@+id/ExampleAuthentication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="Avataryug.Example.QuickTest.ExampleAuthentication"
+                tools:layout="@layout/fragment_example_authentication"
+
+                />
+
+            <fragment
+                android:id="@+id/ExampleUserAccountManagement"
+                android:name="Avataryug.Example.QuickTest.ExampleUserAccountManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout="@layout/fragment_example_user_account_management"
+
+                />
+
+            <fragment
+                android:id="@+id/ExampleEconomy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="Avataryug.Example.QuickTest.ExampleEconomy"
+                tools:layout="@layout/fragment_example_economy"
+
+                />
+
+            <fragment
+                android:id="@+id/ExampleUserDataManagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="Avataryug.Example.QuickTest.ExampleUserDataManagement"
+                tools:layout="@layout/fragment_example_user_data_management"
+                />
+
+
+            <fragment
+                android:id="@+id/ExampleAdvertising"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="Avataryug.Example.QuickTest.ExampleAdvertising"
+                tools:layout="@layout/fragment_example_advertising"
+                />
+            <fragment
+                android:id="@+id/ExampleAvatarmanagement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:name="Avataryug.Example.QuickTest.ExampleAvatarmanagement"
+                tools:layout="@layout/fragment_example_avatarmanagement"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

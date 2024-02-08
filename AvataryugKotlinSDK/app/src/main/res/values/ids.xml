@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="linearLayout12" type="id" />
+    <item name="linearLayout11" type="id" />
+    <item name="linearLayout10" type="id" />
+    <item name="linearLayout9" type="id" />
+    <item name="linearLayout8" type="id" />
+    <item name="linearLayout4" type="id" />
+    <item name="linearLayout5" type="id" />
+    <item name="linearLayout7" type="id" />
+    <item name="linearLayout6" type="id" />
+    <item name="linearLayout13" type="id" />
+    <item name="ChangePasswordBtn" type="id" />
+    <item name="UpdateDefaultAvatarBtn" type="id" />
+    <item name="DeleteUserBtn" type="id" />
+    <item name="GetuserProfileBtn" type="id" />
+    <item name="UpdateUserDemographicBtn" type="id" />
+    <item name="getUserAccountInfo" type="id" />
+    <item name="UpdateDisplayNameBtn" type="id" />
+    <item name="RemoveGenericServiceBtn" type="id" />
+    <item name="AddGenericServiceBtn" type="id" />
+    <item name="UnLinkFacebookBtn" type="id" />
+    <item name="LinkFacebookBtn" type="id" />
+    <item name="UnLinkGoogleBtn" type="id" />
+    <item name="LinkGoogleBtn" type="id" />
+    <item name="LinkAppleBtn" type="id" />
+    <item name="UnLinkAppleBtn" type="id" />
+    <item name="UnLinkAndroidDeviceBtn" type="id" />
+    <item name="LinkAndroidDeviceBtn" type="id" />
+    <item name="UnlinkCustomBtn" type="id" />
+    <item name="LinkCustomIDBtn" type="id" />
+    <item name="LinkIOSDeviceBtn" type="id" />
+    <item name="UnLinkIOSDeviceBtn" type="id" />
+</resources>
