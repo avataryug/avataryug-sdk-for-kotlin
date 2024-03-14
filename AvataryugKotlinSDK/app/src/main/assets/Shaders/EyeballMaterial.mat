@@ -1,0 +1,21 @@
+material {
+    name : "EyeballMaterial",
+    parameters : [
+        {
+            type : sampler2d,
+            name : EyeballTex
+        }
+    ],
+    requires : [
+        uv0
+    ],
+    shadingModel : lit,
+    blending : opaque
+}
+
+fragment {
+    void material(inout MaterialInputs material) {
+        prepareMaterial(material);
+        material.baseColor = texture(materialParams_EyeballTex, getUV0());
+    }
+}

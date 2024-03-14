@@ -1,0 +1,23 @@
+material {
+    name : "ClothMaterial",
+    flipUV : false,
+    parameters : [
+        {
+            type : sampler2d,
+            name : baseTexture
+        }
+    ],
+    requires : [
+        uv0
+    ],
+    shadingModel : lit,
+    blending : opaque
+}
+
+fragment {
+    void material(inout MaterialInputs material) {
+        prepareMaterial(material);
+        float4 baseTex = texture (materialParams_baseTexture, getUV0());
+        material.baseColor =  baseTex;
+    }
+}

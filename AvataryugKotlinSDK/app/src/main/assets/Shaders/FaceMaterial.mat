@@ -1,0 +1,83 @@
+material {
+    name : "FaceMaterial",
+    flipUV : false,
+    parameters : [
+        {
+            type : sampler2d,
+            name : baseTexture
+        },
+        {
+            type : sampler2d,
+            name : tattooTexture
+        },
+        {
+            type : sampler2d,
+            name : hairTexture
+        },
+        {
+            type : float4,
+            name : hairColor
+        },
+        {
+            type : sampler2d,
+            name : facialHairTexture
+        },
+        {
+            type : float4,
+            name : facialHairColor
+        },
+        {
+            type : sampler2d,
+            name : eyebrowTexture
+        },
+        {
+            type : float4,
+            name : eyebrowColor
+        },
+        {
+            type : sampler2d,
+            name : lipsTexture
+        },
+        {
+            type : float4,
+            name : lipsColor
+        },
+        {
+            type : sampler2d,
+            name : normalMap
+        },
+        {
+            type : sampler2d,
+            name : roughness
+        }
+    ],
+    requires : [
+        uv0
+    ],
+    shadingModel : lit,
+    blending : opaque
+}
+
+fragment {
+    void material(inout MaterialInputs material) {
+        prepareMaterial(material);
+
+        float4 faceTex = texture (materialParams_baseTexture, getUV0()) * vec4(1.0, 1.0, 1.0, 1.0);
+        float4 tatooTex = texture (materialParams_tattooTexture,  getUV0()) * vec4(1.0, 1.0, 1.0, 1.0);
+        float4 hairTex = texture (materialParams_hairTexture,  getUV0()) * materialParams.hairColor;
+        float4 facialhairTex = texture (materialParams_facialHairTexture,  getUV0()) * materialParams.facialHairColor;
+        float4 eyebrowTex = texture (materialParams_eyebrowTexture,  getUV0()) * materialParams.eyebrowColor;
+        float4 lipTex = texture (materialParams_lipsTexture,  getUV0()) * materialParams.lipsColor ;
+
+        float4 faceXtatoo = mix(faceTex,tatooTex,tatooTex.a);
+        float4 ftXhair = mix(faceXtatoo,hairTex,hairTex.a);
+        float4 fthXbeard = mix(ftXhair,facialhairTex,facialhairTex.a);
+        float4 fthbXeyebro = mix(fthXbeard,eyebrowTex,eyebrowTex.a);
+        float4 fthbeXeyelin = mix(fthbXeyebro,lipTex,lipTex.a);
+        material.baseColor = fthbeXeyelin;
+
+        material.normal = texture(materialParams_normalMap, getUV0()).xyz * 2.0 - 1.0;
+        material.roughness = texture(materialParams_roughness, getUV0()).r;
+
+    }
+}

@@ -1,0 +1,40 @@
+material {
+    name : "BodyMaterial",
+    flipUV : false,
+    parameters : [
+        {
+            type : sampler2d,
+            name : baseTexture
+        },
+        {
+            type : sampler2d,
+            name : tattooTexture
+        },
+        {
+            type : sampler2d,
+            name : normalMap
+        },
+        {
+            type : sampler2d,
+            name : roughness
+        }
+    ],
+    requires : [
+        uv0
+    ],
+    shadingModel : lit,
+    blending : opaque
+}
+
+fragment {
+    void material(inout MaterialInputs material) {
+        prepareMaterial(material);
+
+        float4 baseTex = texture (materialParams_baseTexture, getUV0());
+        float4 tattooTex = texture (materialParams_tattooTexture, getUV0());
+        material.baseColor =  mix (baseTex, tattooTex,tattooTex.w);
+
+        material.normal = texture(materialParams_normalMap, getUV0()).xyz;
+        material.roughness = texture(materialParams_roughness, getUV0()).r;
+    }
+}
